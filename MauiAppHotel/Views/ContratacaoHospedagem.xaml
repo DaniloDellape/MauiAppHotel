@@ -88,6 +88,12 @@
                         FontSize="30"
                         BackgroundColor="Gold"/>
 
+                <Button Text="Sobre" Clicked="Button_Clicked_1"
+                        HorizontalOptions="Center"
+                        FontFamily="Italianno"
+                        FontSize="30"
+                        BackgroundColor="Gold"/>
+
             </VerticalStackLayout>
         </Frame>
 

@@ -1,3 +1,5 @@
+using Microsoft.Maui.ApplicationModel.DataTransfer;
+
 namespace MauiAppHotel.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
@@ -31,6 +33,18 @@ public partial class ContratacaoHospedagem : ContentPage
 		}
     }
 
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        try
+        {
+            Navigation.PushAsync(new Sobre());
+        }
+        catch (Exception ex)
+        {
+            DisplayAlert("Ops", ex.Message, "OK");
+        }
+    }
+
     private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
     {
 		DatePicker elemento = sender as DatePicker;
@@ -40,4 +54,6 @@ public partial class ContratacaoHospedagem : ContentPage
 		dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
 		dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(1);
     }
+
+   
 }
